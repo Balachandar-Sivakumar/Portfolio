@@ -630,9 +630,7 @@
                 <div class="lg:w-2/5 flex justify-center fade-in">
                     <div class="relative">
                         <div class="hero-image w-80 h-80 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 flex items-center justify-center pulse floating neon-glow">
-                            <div class="hero-image-inner w-72 h-72 rounded-full bg-gradient-to-r from-indigo-600 to-blue-500 flex items-center justify-center">
-                                <i class="fas fa-code text-white text-7xl"></i>
-                            </div>
+                            <img src="IMG_20251103_161530.jpeg" alt="Round Image" class="w-68 h-68 rounded-full object-cover">
                         </div>
                         <div class="absolute -bottom-4 -right-4 bg-gray-900 rounded-2xl shadow-xl p-4 border border-purple-500">
                             <p class="font-bold text-purple-400">8+ Projects</p>
@@ -931,11 +929,18 @@
         // Projects Data
         const projects = [
             {
-                title: "White collors",
-                description: "Developed an interactive card game with dynamic animations, real-time score tracking, and intuitive user controls for an engaging gameplay experience.",
-                technologies: ["HTML", "TailwindCSS", "Laravel","JavaScript","MySql"],
-                status: "In progerss",
-                link : ""
+                title: "White-Collors",
+                description: "Built a streamlined legal support platform that helps users connect with advocates, manage case details, schedule consultations, and track case progress through an intuitive and user-friendly interface.",
+                technologies: ["HTML", "TailwindCSS", "Laravel", "JavaScript", "MySQL"],
+                status: "In Progress",
+                link: "https://github.com/Balachandar-Sivakumar/White-collors"
+            },
+                        {
+                title: "Laptop Sales & Service",
+                description: "Building a complete e-commerce platform for laptop sales and services with user authentication, product catalog, and payment processing.",
+                technologies: ["HTML", "Tailwind CSS", "JavaScript", "Python", "Flask", "MongoDB"],
+                status: "In Progress",
+                link : "https://github.com/Balachandar-Sivakumar/Laptop-Salse-and-Service"
             },
             {
                 title: "CollabNest - Freelancer Platform",
@@ -943,13 +948,6 @@
                 technologies: ["HTML", "Tailwind CSS", "JavaScript", "Laravel", "MySQL"],
                 status: "Completed",
                 link : "https://github.com/Balachandar-Sivakumar/CollabNest"
-            },
-            {
-                title: "Laptop Sales & Service E-commerce",
-                description: "Building a complete e-commerce platform for laptop sales and services with user authentication, product catalog, and payment processing.",
-                technologies: ["HTML", "Tailwind CSS", "JavaScript", "Python", "Flask", "MongoDB"],
-                status: "In Progress",
-                link : ""
             },
             {
                 title: "Online Task Management Backend",
@@ -1014,7 +1012,7 @@
                 const statusColor = project.status === 'Completed' ? 'text-green-400' : 'text-blue-400';
                 
                 projectCard.innerHTML = `
-                    <div class="flex justify-between items-start mb-4">
+                    <div class="flex justify-between items-start mb-5">
                         <h3 class="text-xl font-bold text-white">${project.title}</h3>
                         <span class="${statusColor} text-sm font-medium">${project.status}</span>
                     </div>
@@ -1023,7 +1021,7 @@
                         ${badges}
                     </div>
                     <div class="flex justify-between items-center">
-                        <a href="${project['link']}" class="text-purple-400 hover:text-purple-300 font-medium flex items-center">
+                        <a href="${project.link}" class="text-purple-400 hover:text-purple-300 font-medium flex items-center">
                             <i class="fab fa-github mr-2"></i>
                             View Project
                         </a>
